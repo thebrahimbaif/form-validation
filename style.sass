@@ -1,0 +1,80 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+$grey-light: #FBFBFB
+$black: #343434
+$danger: #FF445B
+$success: #2acc12 
+
+body
+    height: 100vh
+    font-family: "product sans", sans-serif
+
+.container
+    width: 100%
+    height: 100%
+    background-color: $grey-light
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 1.5rem
+    form
+        background-color: #ffffff
+        width: 40rem
+        padding: 2rem 4rem
+        border-radius: 1rem
+        border: .5px solid #D4D4D4
+        h2
+            margin-bottom: 2rem
+            text-align: center
+        .form__control
+            margin-bottom: 1.5rem
+            padding-bottom: 2rem
+            position: relative
+            label
+                margin-bottom: .5rem
+                display: inline-block
+            input
+                display: block
+                width: 100%
+                background-color: $grey-light
+                padding: 1.5rem
+                font-family: inherit
+                border-radius: 1rem
+                border: 1px solid #D4D4D4
+                &:focus
+                    border: 1px solid $black
+            small
+                position: absolute
+                left: 0
+                bottom: 0
+                visibility: hidden
+            &.error input
+                border: 1px solid $danger
+            &.success input
+                border: 1px solid $success
+            &.success small
+                color: $success
+            &.error small
+                visibility: visible
+                color: $danger
+
+        button
+            display: block
+            width: 100%
+            background-color: $black
+            border: none
+            color: white
+            font-family: inherit
+            text-transform: uppercase
+            font-weight: bold
+            border-radius: 1rem
+            padding: 1.5rem 0
+            cursor: pointer
